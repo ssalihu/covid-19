@@ -22,7 +22,7 @@ public class AWSServiceHelper {
 		AmazonSNSClient snsClient = new AmazonSNSClient();
 		String topicArn = System.getenv("TOPIC_ARN");
 
-		final String msg = " Covid parsed data from JHU " + data;
+		final String msg = " Covid parsed data from JHU successfully." ;
 		final PublishRequest publishRequest = new PublishRequest(topicArn, msg);
 		final PublishResult publishResponse = snsClient.publish(publishRequest);
 
